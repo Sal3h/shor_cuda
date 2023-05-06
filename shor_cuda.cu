@@ -39,6 +39,7 @@ void gpu_hadamard(int sm, cudouble *data, int n, int q) {
 	cuda_hadamard<<<sm, THREAD_PER_SM>>>(data, n, sqrt_1_2, mask_q);
 }
 
+
 __global__ void cuda_controlled_rz(cudouble *data, int n, const cudouble omega, const int mask_q) {
 	FOR() {
 		if ((~i) & mask_q) continue;
