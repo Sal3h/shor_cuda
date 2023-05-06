@@ -21,6 +21,7 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
+  
   try {
     const int N = std::stoi(std::string(argv[2]));
     std::cerr << "N = " << N << std::endl;
