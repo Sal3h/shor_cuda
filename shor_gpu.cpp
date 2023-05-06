@@ -21,6 +21,7 @@ void shor_gpu::hadamard(int q) {
   gpu_hadamard(sm, data, n, q);
 }
 
+
 void shor_gpu::controlled_rz(int q1, int q2, double ang) {
   static const double PI2 = 2.0 * acos(-1.0);
   const cudouble omega = exp(std::complex<double>(0.0, PI2 * ang));
